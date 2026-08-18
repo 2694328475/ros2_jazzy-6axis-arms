@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="link_4">
+    <link name="link_4">
+      <inertial>
+        <origin xyz="-0.0016798 -0.00057319 -0.074404" rpy="0 0 0" />
+        <mass value="0.34936" />
+        <inertia
+          ixx="0.0030532" ixy="-1.8615E-05" ixz="-7.0047E-05"
+          iyy="0.0031033" iyz="-2.3301E-05" izz="0.00022264" />
+      </inertial>
+      
+      <visual>
+        <geometry>
+          <mesh filename="package://ar3_description/meshes/link_4.STL" />
+        </geometry>
+        <material name="aluminum" />
+      </visual>
+
+      <collision>
+        <origin xyz="0.002739 0.000894 -0.085178" rpy="0 0 0"/>
+        <geometry>
+          <!-- <box size="0.085633 0.070413 0.325782"/> -->
+          <mesh filename="package://ar3_description/meshes/link_4.STL" />
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+
+</robot>

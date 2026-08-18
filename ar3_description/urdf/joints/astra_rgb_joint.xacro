@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="astra_rgb_joint">
+    <xacro:fixed_joint
+      name="astra_rgb_joint"
+      parent="astra_camera_link"
+      child="astra_rgb_optical_link"
+      origin_xyz="0.0065 0.070 0.015"
+      origin_rpy="0 0 0" />
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ar3">
+
+  <!-- 包含通用宏和材质 -->
+  <xacro:include filename="common.xacro" />
+  <xacro:include filename="materials.xacro" />
+  <xacro:include filename="joints/limits.xacro" />
+  <!-- 包含连杆 -->
+  <xacro:include filename="links/base_link.xacro" />
+  <xacro:include filename="links/link_1.xacro" />
+  <xacro:include filename="links/link_2.xacro" />
+  <xacro:include filename="links/link_3.xacro" />
+  <xacro:include filename="links/link_4.xacro" />
+  <xacro:include filename="links/link_5.xacro" />
+  <xacro:include filename="links/link_6.xacro" />
+
+  <!-- 包含关节 -->
+  <xacro:include filename="joints/joint_1.xacro" />
+  <xacro:include filename="joints/joint_2.xacro" />
+  <xacro:include filename="joints/joint_3.xacro" />
+  <xacro:include filename="joints/joint_4.xacro" />
+  <xacro:include filename="joints/joint_5.xacro" />
+  <xacro:include filename="joints/joint_6.xacro" />
+
+  <!-- 实例化连杆和关节（按顺序） -->
+  <xacro:base_link />
+  <xacro:joint_1 />
+  <xacro:link_1 />
+  <xacro:joint_2 />
+  <xacro:link_2 />
+  <xacro:joint_3 />
+  <xacro:link_3 />
+  <xacro:joint_4 />
+  <xacro:link_4 />
+  <xacro:joint_5 />
+  <xacro:link_5 />
+  <xacro:joint_6 />
+  <xacro:link_6 />
+
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ========== Gazebo 仿真所需配置 ========== -->
+  <!-- 定义 ros2_control 标签，使用 Gazebo 硬件接口 -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <joint name="joint_1">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+    <joint name="joint_2">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+    <joint name="joint_3">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+    <joint name="joint_4">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+    <joint name="joint_5">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+    <joint name="joint_6">
+      <command_interface name="position" />
+      <state_interface name="position" />
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find ar3_bringup)/config/ar3_trajectory_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>
