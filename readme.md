@@ -67,27 +67,22 @@ teensy4.1	Teensy 4.1 固件（Arduino/PlatformIO 平台）
 ar3_moveit_config	MoveIt 2 配置文件
 ar3_gazebo	Gazebo 仿真
 ar3_bringup	启动文件与轨迹示例
+
 🚀 快速开始
 1. 环境要求
 操作系统：Ubuntu 24.04
-
 ROS 2 发行版：Jazzy
-
 硬件：
-
 AR3 六轴机械臂（开环步进电机版）
-
 Teensy 4.1 开发板
-
 ASTRA PRO 深度相机（或任何 ROS 2 支持的 RGB-D 相机）
-
 M2006 电机 + C610 电调（力控夹爪）
 
 依赖：
-
 bash
 sudo apt install ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-moveit
 sudo apt install ros-jazzy-gazebo-ros-pkgs ros-jazzy-tf2-tools
+
 2. 构建工作空间
 bash
 mkdir -p ~/ar3_ws/src
@@ -97,17 +92,20 @@ cd ..
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source install/setup.bash
-3. 烧录固件
+
+4. 烧录固件
 使用 Arduino IDE 或 PlatformIO 打开 teensy4.1/teensy4.1.ino，选择开发板 Teensy 4.1，编译并上传。确保串口设备为 /dev/ttyACM0。
 
-4. 启动真实机械臂控制
+5. 启动真实机械臂控制
 bash
 ros2 launch ar3_hd_moveit_config demo.launch.py
-5. Gazebo 仿真模式
+
+7. Gazebo 仿真模式
 bash
 ros2 launch ar3_gazebo ar3_gazebo_bringup.launch.py
 ros2 launch ar3_moveit_config demo.launch.py use_sim_time:=true
-6. 通过 ros2_control 直接发送指令
+
+9. 通过 ros2_control 直接发送指令
 编辑 ar3_description/urdf/ar3.urdf.xacro，取消 ros2_control 配置部分的注释。
 
 启动轨迹控制：
