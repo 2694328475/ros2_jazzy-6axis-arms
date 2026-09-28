@@ -112,7 +112,9 @@ ros2 launch ar3_moveit_config demo.launch.py use_sim_time:=true
 
 bash
 ros2 launch ar3_bringup ar3_trajectory.launch.py
+
 📸 演示
+
 Gazebo仿真演示
 <img width="480" height="270" alt="animation_edited" src="https://github.com/user-attachments/assets/72e2e0ac-0798-4331-b809-e90396640faf" />
 
