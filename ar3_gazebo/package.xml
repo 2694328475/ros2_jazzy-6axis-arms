@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ar3_gazebo</name>
+  <version>0.0.0</version>
+  <description>AR3 Gazebo simulation package</description>
+  <maintainer email="wyf@todo.todo">wyf</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>gazebo_msgs</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>ar3_description</depend>
+  <depend>ar3_bringup</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

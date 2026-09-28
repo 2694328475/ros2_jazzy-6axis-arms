@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="joint_1">
+    <xacro:ar3_revolute_joint 
+      name="joint_1"
+      parent="base_link"
+      child="link_1" 
+      origin_xyz="0 0 0.003445"
+      origin_rpy="3.1416 -1.0248E-21 -1.6736E-05"
+      axis_xyz="0 0 1" />
+  </xacro:macro>
+
+</robot>

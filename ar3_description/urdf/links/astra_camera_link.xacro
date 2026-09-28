@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="astra_camera_link">
+    <link name="astra_camera_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://ar3_description/meshes/Astra_Pro_Plus.STL" scale="0.001 0.001 0.001" />
+        </geometry>
+        <material name="aluminum_dark" />
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.165 0.04 0.048"/>
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

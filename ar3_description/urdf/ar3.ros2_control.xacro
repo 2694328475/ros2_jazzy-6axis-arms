@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="ar3_ros2_control" params="serial_port baudrate">
+    <ros2_control name="ar3_hw" type="system">
+      <hardware>
+        <plugin>ar3_hardware_interface/AR3HardwareInterface</plugin>
+        <param name="serial_port">${serial_port}</param>
+        <param name="baudrate">${baudrate}</param>
+        <!-- optional gear_ratio and limits may be read by the
+             hardware interface via <joint> entries below -->
+      </hardware>
+
+        <joint name="joint_1">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="joint_2">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="joint_3">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="joint_4">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="joint_5">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="joint_6">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+
+        </ros2_control>
+    </xacro:macro>
+</robot>

@@ -1,0 +1,9 @@
+# Default initial positions for ar3's ros2_control fake system
+
+initial_positions:
+  joint_1: -2.4
+  joint_2: 0
+  joint_3: 1.35
+  joint_4: -0.35
+  joint_5: 1.538
+  joint_6: 1.538

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<library path="ar3_hardware_interface">
+  <class name="ar3_hardware_interface/AR3HardwareInterface"
+         type="ar3_hardware_interface::AR3HardwareInterface"
+         base_class_type="hardware_interface::SystemInterface"/>
+</library>
