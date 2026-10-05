@@ -6,7 +6,16 @@
         <ros2_control name="${name}" type="system">
             <hardware>
                 <!-- By default, set up controllers for simulation. This won't work on real hardware -->
-                <plugin>mock_components/GenericSystem</plugin>
+                <!-- <plugin>mock_components/GenericSystem</plugin> -->
+                <plugin>ar3_hardware_interface/AR3HardwareInterface</plugin>
+                <param name="serial_port">/dev/ttyACM0</param>
+                <param name="baudrate">115200</param>
+                <param name="gear_ratio_joint_1">-10.0</param>
+                <param name="gear_ratio_joint_2">-50.0</param>
+                <param name="gear_ratio_joint_3">-50.0</param>
+                <param name="gear_ratio_joint_4">-14.0</param>
+                <param name="gear_ratio_joint_5">-1.0</param>
+                <param name="gear_ratio_joint_6">-19.0</param>
             </hardware>
             <joint name="joint_1">
                 <command_interface name="position"/>

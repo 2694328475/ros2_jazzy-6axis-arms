@@ -140,8 +140,8 @@ hardware_interface::CallbackReturn AR3HardwareInterface::on_activate(
 {
   if (!hardware_initialized_) return hardware_interface::CallbackReturn::ERROR;
   driver_->startReading();
-  driver_->setSpeedPercentage(25.0);
-  RCLCPP_INFO(node_->get_logger(), "Hardware activated, speed set to 25%%");
+  driver_->setSpeedPercentage(100.0);
+  RCLCPP_INFO(node_->get_logger(), "Hardware activated, speed set to 100%%");
   return hardware_interface::CallbackReturn::SUCCESS;
 }
 

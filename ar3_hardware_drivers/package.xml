@@ -2,10 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>ar3_hardware_drivers</name>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <description>ROS2 hardware drivers for AR3 robot arm with Teensy-based stepper control using simple serial communication (open-loop mode)</description>
-  <maintainer email="your-email@example.com">Your Name</maintainer>
-  <license>Apache-2.0</license>
+  <maintainer email="2694328475@qq.com">Yufeng Wang</maintainer>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
