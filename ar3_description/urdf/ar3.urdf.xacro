@@ -28,7 +28,7 @@
   <xacro:include filename="joints/joint_6.xacro" />
   
   <!-- Include ros2_control configuration -->
-  <xacro:include filename="ar3.ros2_control.xacro" />
+  <!-- <xacro:include filename="ar3.ros2_control.xacro" /> -->
   
   <!-- Base Link -->
   <xacro:base_link />
@@ -70,8 +70,8 @@
   <xacro:link_6 />
 
   <!-- ros2_control configuration -->
-  <xacro:ar3_ros2_control 
+  <!-- <xacro:ar3_ros2_control 
     serial_port="$(arg serial_port)" 
-    baudrate="$(arg baudrate)" />
+    baudrate="$(arg baudrate)" /> -->
 
 </robot>

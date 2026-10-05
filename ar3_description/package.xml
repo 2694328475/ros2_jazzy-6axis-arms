@@ -3,8 +3,8 @@
   <name>ar3_description</name>
   <version>1.0.0</version>
   <description>The AR3 robot description</description>
-  <maintainer email="111@qq.com">Your Name</maintainer>
-  <license>BSD</license>
+  <maintainer email="2694328475@qq.com">Yufeng Wang</maintainer>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

@@ -6,8 +6,12 @@
         <plugin>ar3_hardware_interface/AR3HardwareInterface</plugin>
         <param name="serial_port">${serial_port}</param>
         <param name="baudrate">${baudrate}</param>
-        <!-- optional gear_ratio and limits may be read by the
-             hardware interface via <joint> entries below -->
+        <param name="gear_ratio_joint_1">10.0</param>
+        <param name="gear_ratio_joint_2">50.0</param>
+        <param name="gear_ratio_joint_3">50.0</param>
+        <param name="gear_ratio_joint_4">14.0</param>
+        <param name="gear_ratio_joint_5">1.0</param>
+        <param name="gear_ratio_joint_6">19.0</param>
       </hardware>
 
         <joint name="joint_1">
